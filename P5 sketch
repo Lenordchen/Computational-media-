@@ -1,0 +1,138 @@
+function setup() {
+  createCanvas(500, 500);
+  background(255);
+  angleMode(DEGREES);
+  noFill();
+}
+
+function draw() {
+  background(255);
+  noStroke();
+  fill (178,88,37)
+  strokeWeight(2);
+  //horse
+  beginShape();
+  curveVertex(150,150);
+  curveVertex(160,150);
+  curveVertex(200,200);
+  curveVertex(260,250);
+  curveVertex(380,250);
+  curveVertex(440,250);
+  curveVertex(460,330);
+  curveVertex(490,430);
+  curveVertex(490,440);
+  curveVertex(440,365);
+  curveVertex(410,365);
+  curveVertex(389,500);
+  curveVertex(355,500);
+  curveVertex(355,365);
+  curveVertex(275,365);
+  curveVertex(275,500);
+  curveVertex(235,500);
+  curveVertex(235,365);
+  curveVertex(165,310);
+  curveVertex(120,270);
+  curveVertex(45,280);
+  curveVertex(80,200);
+  endShape(CLOSE);
+  
+  stroke(178,88,37);
+  noStroke();
+  triangle(130,163,140,128,160,150);
+  fill(0);
+  ellipse(128,200,25,25);
+
+   //Me body
+  fill(121,121,109);
+  noStroke();
+
+  beginShape();
+  curveVertex(280,135);
+  curveVertex(300,180);
+  curveVertex(330,220);
+  curveVertex(400,220);
+  curveVertex(380,168);
+  curveVertex(360,135);
+  endShape(CLOSE);
+  
+  //Me_head
+  fill(255);
+  stroke(25,18,12);
+  ellipse(300,100,77,80);
+  stroke(25,18,12);
+  strokeWeight(0);
+  fill(25,18,12);
+  strokeWeight(1);
+  
+  beginShape();
+  curveVertex(250,80);
+  curveVertex(300,35);
+  curveVertex(340,50);
+  curveVertex(400,100);
+  curveVertex(360,180);
+  curveVertex(300,90);
+  endShape(CLOSE);
+  fill(25,18,12);
+  
+  
+  
+  //Me_face
+  ellipse(280,100,15,15);
+  strokeWeight(3);
+  noFill();
+  beginShape();
+  vertex(268,120);
+  bezierVertex(270,135,290,135,290,120);
+  endShape();
+  
+  //Me_pant
+  fill(241,242,236)
+  noStroke();
+
+  beginShape();
+  curveVertex(290,298);
+  curveVertex(280,250);
+  curveVertex(320,213);
+  curveVertex(400,215);
+  curveVertex(380,250);
+  curveVertex(330,250);
+  curveVertex(330,298);
+  endShape(CLOSE);
+  
+  //me_boots
+  fill(75,33,19);
+  rect(290,280,42,42,15,15,2,2);
+  strokeWeight(30);
+  arc(299,320,66,42,0,180);
+  
+  //me_arms
+  fill(97,97,85);
+  noStroke();
+  strokeWeight(5);
+  
+  beginShape();
+  curveVertex(300,155);
+  curveVertex(300,178);
+  curveVertex(235,205);
+  curveVertex(240,220);
+  curveVertex(315,195);
+  curveVertex(330,180);
+  curveVertex(330,155);
+  endShape(CLOSE);
+  
+  //Me_hand
+  fill(9);
+  arc(238,213,22,22,60,240);
+  
+  //ring
+  stroke(66,69,78);
+  strokeWeight(4);
+
+  var p1 = {x:230,y:220},
+   p2 = {x:210,y:250};
+  var p3 = {x:180,y:280},
+   p4 = {x:140,y:280};
+   curve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
+   curve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
+   curve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y);
+}
